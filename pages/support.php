@@ -35,11 +35,22 @@
                 </form>
                 <div id="v_details">
                     <?php 
-                        echo '<img src="../others/images/vol.png" alt="image"/>';
+                        include 'db.php';
+
                         if(isset($_POST["vname"])){
-                            echo '<h4>Name: '.$_POST["vname"].'</h4>';
+                            $conn = OpenCon();
+                            $query = 'select * from volunteer where name="'.$_POST["vname"].'"';
+                            $result = $conn->query($query);
+                            if($result->num_rows > 0){
+                                $row = $result->fetch_assoc();
+                                echo '<img src="../others/images/vol.png" alt="image"/>';
+                                echo '<h4>Name: '.$_POST["vname"].'</h4>';
+                                echo '<h4>Incharge of: '.$row["event"].'</h4><h4>Contact: '.$row["contact"].'</h4>';
+                            }
+                            else{
+                                echo '<p style = "color: tomato"> Sorry that didn\'t work out </p>';
+                            }
                         }
-                        echo '<h4>Incharge of: </h4><h4>Contact: </h4>';
                     ?>
                 </div>
             </div>

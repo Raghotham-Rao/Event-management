@@ -1,0 +1,29 @@
+body{
+    font-family: Tajawal;
+}
+
+.category{
+    width: 80%;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.category>h3{
+    margin: auto;
+    margin-top: 20px;
+    font-size: 25px;
+    width: 80%;
+    border-bottom: 1.5px solid coral;
+    text-align: center;
+}
+
+.category ul li{
+    display: inline;
+    list-style: none;
+}
+
+.category ul li a,.viewallbtn{
+    color: black;
+    text-decoration: none;
+}

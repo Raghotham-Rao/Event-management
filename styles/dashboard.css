@@ -1,0 +1,35 @@
+#no_participation{
+    width: 80%;
+    background-color: #e0e0d1;
+    margin: 30px auto 30px auto;
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+#no_participation img{
+    width: 200px;
+    display: block;
+    margin: 30px auto 0px auto;
+}
+
+#no_participation h2{
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+#no_participation a{
+    text-decoration: none;
+    display: block;
+    width: 15%;
+    color: orangered;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px 0px 5px 0px;
+    transition: color 0.5s, background-color 0.5s;
+    text-align: center;
+}
+
+#no_participation a:hover{
+    color: white;
+    background-color: orangered;
+}

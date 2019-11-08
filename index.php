@@ -36,11 +36,16 @@
 
             <div id="login">
                 <div><button id="login_tab" class="tab" style="border-right: 2px solid rgba(255, 255, 255, 0.6)" onclick="changeFocus(1)">Log in</button><button id="signup_tab" class="tab" onclick="changeFocus(2)">Sign Up</button></div>
-                <form action="pages/welcome_get1.php" method="post" name="signin">
+                <form action="pages/login.php" method="post" name="signin">
                     <p class="mar" ><input class="mar" type="text" placeholder="username.." name='uname' value=""/><br></p>
-                    <p class="mar" id="email_box"><input class="mar" type="text" placeholder="email.."  name='email' value=""/></p>
+                    <p class="mar" id="email_box"><input class="mar" type="email" placeholder="email.."  name='email' value=""/></p>
                     <p class="mar" ><input class="mar" type="password" placeholder="password.."  name='pass' value=""/></p>
                     <input class="mar" type="submit" name="login" value="login" id="submit_btn"/>
+                    <?php
+                        if($_SESSION["invalid_user"] == 1){
+                            echo '<p style="color: tomato; font-family: Tajawal;font-size: 15px;"> Sorry that didn\'t work out </p>';
+                        }
+                    ?>
                 </form>
             </div>
 

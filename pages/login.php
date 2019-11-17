@@ -13,6 +13,7 @@
                 $conn->query($query);
                 $_SESSION["curr_user"] = $un;
                 $conn->close();
+                header("Location: welcome_get1.php");
             }
             else{
                 $conn = OpenCon();

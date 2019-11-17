@@ -1,16 +1,17 @@
 #details{
     width: 55%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-left: 5%;
     margin-top: 20px;
     display: inline-block;
+    text-align: justify;
 }
 
 #finder{
     width: 30%;
     margin-right: 5%;
     margin-top: 20px;
-    border: 1px solid black;
+    border: 1px solid darkgray;
     float: right;
     position: sticky;
     top: 100px;

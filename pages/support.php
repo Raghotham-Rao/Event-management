@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include 'db.php';
+?>
 <!DOCTYPE html>
   <html>
     <head>
@@ -35,8 +39,6 @@
                 </form>
                 <div id="v_details">
                     <?php 
-                        include 'db.php';
-
                         if(isset($_POST["vname"])){
                             $conn = OpenCon();
                             $query = 'select * from volunteer where name="'.$_POST["vname"].'"';

@@ -23,6 +23,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="pages/events.php">Events</a></li>
                     <li><a href="pages/support.php">Support</a></li>
+                    <li class="f-right"><a href="../index.php" id="nav_signup">Sign Up</a></li>
                 </ul>
 
             </div>
@@ -116,7 +117,13 @@
                     document.getElementById("login").style.display = "block";
                     change();
                 }
-            }            
+            }    
+            
+            if(session_set.length > 0){
+                var elem = document.getElementById("nav_signup");
+                elem.innerHTML = session_set;
+                elem.setAttribute("href", "pages/welcome_get1.php");
+            }
 
         </script>
     </body>
